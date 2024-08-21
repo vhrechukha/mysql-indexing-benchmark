@@ -77,6 +77,10 @@ Query: `SELECT * FROM users WHERE date_of_birth = '1980-01-01';`
 - **Type:** `ref` indicates that MySQL is using the `BTREE` index to directly find the rows where `date_of_birth` matches the specified value
 - **Rows Examined:** MySQL estimates it needs to examine approximately 17.9 million rows
 
+## 2. With HASH Indexes
+
+Does not support HASH indexes.
+
 # Check insert speed difference with different innodb_flush_log_at_trx_commit value and different ops per second
 
 ```
