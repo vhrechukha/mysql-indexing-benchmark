@@ -12,7 +12,7 @@ ALTER TABLE users DISABLE KEYS;
 
 SET GLOBAL innodb_flush_log_at_trx_commit = 2;
 
-CREATE PROCEDURE populate_users5(IN start_i INT)
+CREATE PROCEDURE populate_users(IN start_i INT)
 BEGIN
 DECLARE i INT DEFAULT start_i;
 DECLARE batch_size INT DEFAULT 1000;
@@ -47,7 +47,7 @@ DECLARE end_i INT;
     END WHILE;
 END;
 
-CALL populate_users5(7568901);
+CALL populate_users(0);
 
 ALTER TABLE users ENABLE KEYS;
 ```
